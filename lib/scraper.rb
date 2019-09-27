@@ -24,9 +24,10 @@ class Scraper
       course = Course.new
       course.title = post.css("h2").text 
       course.schedule = post.css(".date").text 
-      course.description = 
+      course.description = post.css("p").text
+    end
     
-    #binding.pry
+    binding.pry
   end
   
   def get_courses
